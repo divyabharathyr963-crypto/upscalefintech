@@ -20,3 +20,95 @@ footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--mut
 .notice{font-size:13px;color:#91a6bf;margin-top:22px}
 @media(max-width:850px){.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.price-grid{grid-template-columns:1fr 1fr}nav{display:none}.hero{padding:60px 0}.hero-logo{max-width:340px}.hero-grid{text-align:center}.hero p{margin-left:auto;margin-right:auto}.buttons{justify-content:center}}
 @media(max-width:520px){.price-grid{grid-template-columns:1fr}.brand span{font-size:13px}}
+
+
+/* ===== Upscale Fintech Premium 3D Market Visual ===== */
+.market-3d-scene{
+  position:relative;
+  width:min(560px,92%);
+  height:390px;
+  margin:28px auto;
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.28);
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 50% 35%,rgba(212,175,55,.16),transparent 34%),
+    linear-gradient(145deg,#071019,#020407 65%,#0a0d10);
+  box-shadow:0 30px 80px rgba(0,0,0,.55), inset 0 0 50px rgba(212,175,55,.05);
+  perspective:900px;
+  isolation:isolate;
+}
+.market-grid{
+  position:absolute;inset:45% -20% -40% -20%;
+  background-image:
+    linear-gradient(rgba(212,175,55,.11) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(212,175,55,.11) 1px,transparent 1px);
+  background-size:34px 34px;
+  transform:rotateX(64deg);
+  transform-origin:center top;
+  opacity:.65;
+}
+.market-glow{
+  position:absolute;width:240px;height:240px;left:50%;top:38%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:rgba(212,175,55,.08);
+  filter:blur(25px);
+}
+.market-chart{position:absolute;inset:25px 25px 55px;opacity:.8}
+.market-chart span{
+  position:absolute;bottom:15%;left:var(--x);height:var(--h);width:8px;
+  background:linear-gradient(to top,#8b6b16,#f5d76e);
+  border-radius:4px;
+  box-shadow:0 0 18px rgba(212,175,55,.45);
+  transform:translateY(var(--d)) skewY(-8deg);
+}
+.market-chart span:before{
+  content:"";position:absolute;width:2px;height:150%;left:3px;top:-25%;
+  background:rgba(245,215,110,.75);
+}
+.animal{
+  position:absolute;top:95px;width:150px;height:155px;
+  transform-style:preserve-3d;
+  animation:marketFloat 4.5s ease-in-out infinite;
+}
+.animal.bull{left:45px;transform:rotateY(12deg) rotateZ(-3deg)}
+.animal.bear{right:45px;animation-delay:-2s;transform:rotateY(-12deg) rotateZ(3deg)}
+.animal-head{
+  position:absolute;left:25px;top:25px;width:100px;height:105px;
+  border-radius:48% 48% 42% 42%;
+  background:linear-gradient(145deg,#e8c65a,#6e5316 70%,#241b08);
+  box-shadow:inset 12px 10px 20px rgba(255,255,255,.14), 0 20px 30px rgba(0,0,0,.5);
+}
+.bear .animal-head{background:linear-gradient(145deg,#9c8151,#3b2b18 70%,#130e08)}
+.eye{position:absolute;top:43px;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 10px #fff}
+.e1{left:28px}.e2{right:28px}
+.horn{
+  position:absolute;top:3px;width:54px;height:42px;border-top:10px solid #d7b94d;border-radius:50%;
+  z-index:2;
+}
+.horn-l{left:2px;transform:rotate(-30deg)}.horn-r{right:2px;transform:scaleX(-1) rotate(-30deg)}
+.ear{
+  position:absolute;top:8px;width:38px;height:38px;border-radius:50%;
+  background:#5b4226;z-index:2;box-shadow:inset 0 0 0 8px #2b1e11;
+}
+.ear-l{left:13px}.ear-r{right:13px}
+.animal-label{
+  position:absolute;bottom:0;width:100%;text-align:center;
+  font-weight:800;letter-spacing:.28em;color:#f0cf63;
+  text-shadow:0 3px 15px rgba(0,0,0,.8);
+}
+.market-caption{
+  position:absolute;bottom:18px;left:0;right:0;text-align:center;
+  color:#d7b94d;font-size:12px;font-weight:700;letter-spacing:.35em;
+}
+@keyframes marketFloat{
+  0%,100%{translate:0 0}
+  50%{translate:0 -12px}
+}
+@media(max-width:600px){
+  .market-3d-scene{height:330px}
+  .animal{top:82px;scale:.78}
+  .animal.bull{left:5px}.animal.bear{right:5px}
+  .market-caption{letter-spacing:.18em}
+}
