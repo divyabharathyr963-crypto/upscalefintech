@@ -1,1 +1,44 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#020914;color:#fff}header{position:absolute;z-index:5;width:100%;background:#020914bb;border-bottom:1px solid #ffffff22}.nav{max-width:1180px;margin:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 4%}.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:bold}.brand img{width:48px;height:48px;object-fit:contain;border-radius:8px}nav{display:flex;gap:25px}nav a{color:#fff;text-decoration:none}.hero{position:relative;min-height:760px;display:flex;align-items:center;overflow:hidden}.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.shade{position:absolute;inset:0;background:linear-gradient(90deg,#020914ee,#02091499 48%,#02091422)}.content{position:relative;z-index:2;width:min(1180px,92%);margin:auto}.content small{color:#2acfff;letter-spacing:2px;font-weight:bold}.content h1{font-size:clamp(45px,6vw,76px);line-height:1.05;margin:16px 0}.content h1 span{color:#2ebcff}.content p{max-width:590px;color:#c5d4e4;font-size:18px;line-height:1.7}.btn{display:inline-block;margin:18px 10px 0 0;padding:14px 24px;background:#078cff;color:white;text-decoration:none;border-radius:8px;font-weight:bold}.outline{background:#06182bbb;border:1px solid #39cfff}.wa{position:fixed;right:24px;bottom:24px;z-index:9;background:#25d366;color:white;text-decoration:none;padding:14px 22px;border-radius:30px;font-weight:bold}@media(max-width:800px){header{position:relative}.nav{flex-direction:column;padding:12px}nav{flex-wrap:wrap;justify-content:center;gap:12px}.hero{min-height:620px}.content{text-align:center}.content p{margin:auto}.shade{background:#02091499}}
+.hero-grid {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 650px;
+  padding: 80px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.hero-content h1 span {
+  color: #27b9ff;
+}
+
+.hero-video-box {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-video-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+}
