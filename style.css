@@ -1,0 +1,14 @@
+
+*{box-sizing:border-box}body{margin:0;background:#020c19;color:#fff;font-family:Arial,sans-serif}a{text-decoration:none;color:inherit}
+header{height:78px;border-bottom:1px solid #17304b;display:flex;align-items:center;justify-content:space-between;padding:0 8%;position:sticky;top:0;background:#020c19;z-index:10}
+.logo{font-weight:800;font-size:24px}.logo small{display:block;font-size:10px;letter-spacing:1.5px}.logo span,.blue{color:#1688ff}
+nav{display:flex;gap:34px;font-size:14px}nav a:hover,.active{color:#12a8ff}.btn{display:inline-block;background:#087cff;padding:13px 25px;border-radius:5px}
+.wrap{max-width:1320px;margin:auto;padding:42px 24px}.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:55px;align-items:center;min-height:390px}
+h1{font-size:54px;line-height:1.08;margin:12px 0}h2{font-size:30px}h3{margin-top:0}.eyebrow{color:#08a9ff;letter-spacing:2px;font-weight:700}
+.visual{min-height:305px;border:1px solid #173c5c;border-radius:9px;background:#061b31 center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;font-size:24px;font-weight:800}
+.jupi{background-image:linear-gradient(rgba(2,12,25,.12),rgba(2,12,25,.12)),url('assets/jupitron-visual.png');background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#000}
+.grid4,.grid5,.grid3{display:grid;gap:14px;margin:26px 0}.grid4{grid-template-columns:repeat(4,1fr)}.grid5{grid-template-columns:repeat(5,1fr)}.grid3{grid-template-columns:repeat(3,1fr)}
+.card{border:1px solid #173c5c;background:#061525;border-radius:8px;padding:26px;min-height:120px}.center{text-align:center}.offer{color:#ffd400;font-size:30px;font-weight:800}.old{text-decoration:line-through;color:#9ba8b5}.section-title{text-align:center;margin:42px 0 20px}.plans .card{min-height:210px}.plans .btn{margin-top:15px;width:100%}
+footer{border-top:1px solid #17304b;margin-top:45px;padding:26px 8%;display:flex;justify-content:space-between;font-size:12px;color:#c7d2df}
+.contact{display:grid;grid-template-columns:.8fr 1.4fr .7fr;gap:15px}.input{width:100%;padding:13px;margin:6px 0;background:#07192b;border:1px solid #1c405f;color:white;border-radius:4px}
+@media(max-width:800px){nav{gap:10px;font-size:11px}.hero,.contact{grid-template-columns:1fr}.grid3,.grid4,.grid5{grid-template-columns:1fr}h1{font-size:38px}header{padding:0 4%}.visual{min-height:240px}}
